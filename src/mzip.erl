@@ -12,13 +12,9 @@ zipa([]) ->
 zipa([H | []]) ->
   H;
 zipa([H | T]) ->
-  [Hh , Ht] =  head(H),
-  [Hh | zipa(T)] ++ zipa(Ht).
+  %% do something with H;
+  zipa(T).
 
-head([Hh, Ht]) ->
-  [Hh, Ht];
-head(E) ->
-  [E, []].
 
 
 zip([ Ah | At], [ Bh | Bt ]) ->
